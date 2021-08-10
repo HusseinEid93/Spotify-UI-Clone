@@ -1,0 +1,57 @@
+include utilities/globals
+include utilities/components
+
+- const selectOptions = ['Month', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+doctype html 
+html(lang="en")
+   head 
+      +HTMLHead('signUp', 'Sign up - Spotify', false)
+   body 
+      main.main.mx-auto.mw-100.flex-column(class=centerVertically) 
+         .main__logo 
+            img.w-100(src="../images/signUp/Spotify-black.png")
+         h1.m-0.main__heading.font-weight-bold.text-center Sign up for free to start listening.
+         +button('Sign up with Facebook')(class="main__facebook-btn")
+         +privacyPolicy()
+         +separator(class=centerVertically class="main__separator mt-3")
+
+         // Start the form 
+         .main__form-container.w-100  
+            h6.mb-0.mt-4.main__form-heading.text-center Sign up with your email address
+            form.mt-4.main__form.flex-column(class=centerVertically)
+               +formInputGroup("What's your email?", 'email', 'email', "Enter your email.")
+               +formInputGroup("Confirm your email", 'email', 'confirm', "Enter your email again.")
+               +formInputGroup("Create a password", 'password', 'password', "Create a password.")  
+               .w-100
+                  +formInputGroup("What should we call you?", 'text', 'name', "Enter a profile name.")  
+                  span.d-block.mt-2.main__input-note This appears on your profile.
+               .main__input-group.w-100 
+                  span.d-block.main__label.mb-2.font-weight-bold What's your date of birth?
+                  .main__birth.mt-2 
+                     +selectMonth(selectOptions)
+                     +enterDayOrYear('day')
+                     +enterDayOrYear('year')
+               .main__input-group.w-100
+                  label.d-block.main__label.m-0.font-weight-bold(for="gender") What's your gender?
+                  .main__radio-inputs.mt-2.d-flex 
+                     +radioInputGroup('male')
+                     +radioInputGroup('female')
+                     +radioInputGroup('non-binary')
+               .main__input-group.main__input-group--checkbox.w-100
+                  label.m-0.main__label(for="checkbox")
+                     input.main__checkbox.d-inline-flex.position-relative(type="checkbox" id="checkbox" class=flex)
+                     span.input__label.ml-1.
+                        Share my registration data with Spotify's content providers for marketing purposes.
+               .main__robot.align-self-start.mt-2(class=centerVertically)  
+                  input.main__robot-checkbox.position-relative(type="checkbox" class=flex id="robot") 
+                  label.m-0(for="robot").main__robot-text.main__label I'm not a robot
+                  .main__robot-img.ml-auto.h-100.flex-column(class=flex)
+                     img(src="../images/signUp/robot.png") 
+                     span reCAPTCHA
+                     span Privacy - Terms 
+
+               +privacyPolicy()(class="text-center")  
+               input.main__sign-up-btn.border-0(type="submit" value="Sign up")  
+
+         .main__log-in.text-center.mt-4 Have an account? #[a.main__anchor(href="#") Log in]. 

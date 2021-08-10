@@ -1,0 +1,38 @@
+include utilities/globals
+include utilities/components
+
+doctype html 
+html(lang="en")
+   head 
+      +HTMLHead('logIn', 'Login - Spotify', false)
+   body 
+      .header(class=flex) 
+         img.header__img(src="../images/logIn/Spotify-black.png")
+
+      main.pb-2.main.mw-100.mx-auto
+         h6.m-0.main__title.text-center.font-weight-bold To continue, log in to Spotify. 
+         .main__buttons.d-flex.flex-column 
+            +loginButton('facebook', 'fab fa-facebook', 'continue with facebook') 
+            +loginButton('apple', 'fab fa-apple', 'continue with Apple') 
+            +loginButton('google', null, 'continue with google', true)
+            +loginButton('phone', null, 'continue with phone number', null)
+
+         +separator(class=flex class="main__separator mt-3 text-uppercase")
+
+         //Form 
+         form.main__form.w-100.mt-2
+            +formInputGroup('Email address or username', 'text', 'username', "Email address or username")(class="mb-2", rounded='rounded-0')
+            +formInputGroup('Password', 'password', 'password', "Password")(class="mb-2", rounded='rounded-0')
+
+            a.d-block.mt-3.main__forget-password(href="#") Forget your password? 
+
+            .main__submit.pb-3.d-flex.flex-md-row.flex-column.align-items-md-center.align-items-start.justify-content-between.w-100
+               .mb-md-0.mb-2(class=centerVertically) 
+                  input.mr-2.main__checkbox-input(type="checkbox" id="remember-me" class=flex)
+                  label.mb-0.main__checkbox-label(for="remember-me") Remember me  
+               input.main__button.main__button--submit.border-0.text-uppercase.font-weight-bold(type="submit" value="log in") 
+         // end form 
+
+         .main__footer 
+            h5.main__footer-title.text-center.font-weight-bold Don't have an account?
+            +loginButton('spotify', null, 'sign up for spotify', null)

@@ -1,0 +1,93 @@
+include utilities/globals
+include utilities/components
+
+doctype html 
+html(lang="en")
+   head  
+      +HTMLHead(
+         'premium', 
+         'Spotify Premium - Spotify(US)'
+      )
+
+   body 
+      +navbarWithOverlay()
+
+
+      section.showcase.text-white
+         .container.mw-md-100.d-flex.flex-column 
+            h1.mb-0.font-weight-bold.showcase__heading Get Premium free for 1 month
+            p.mb-0.showcase__paragraph Only $9.99 after. Cancel anytime.
+            .showcase__buttons.mt-2.mt-sm-3.mt-md-0.w-100.mx-auto.d-flex.flex-column.flex-md-row
+               +button('get started')(class="showcase__btn showcase__btn--black text-center text-uppercase")
+               +button('view plans')(class="showcase__btn showcase__btn--transparent text-center text-uppercase")
+            +termsAndConditionText(class="showcase__terms mt-4 mb-3 mt-sm-2 mb-sm-3 mb-md-0")
+
+
+      section.go-premium
+         h1.go-premium__heading.text-center Why go Premium?
+         .container.mw-md-100
+            +premiumFeature(1, 'Download music.', 'Listen anywhere.') 
+            +premiumFeature(2, 'No ad interruptions.', 'Enjoy nonstop music.') 
+            +premiumFeature(3, 'Play any song.', 'Even on mobile.') 
+            +premiumFeature(4, 'Unlimited skips.', 'Just hit next.')(class="mb-4 mb-sm-0") 
+
+      
+      section.pick-premium
+         .pick-premium__header.mb-5.flex-column(class=centerVertically) 
+            h2.pick-premium__heading.font-weight-bold.m-0 Pick your Premium
+            p.pick-premium__desc.text-center.m-0 Listen without limits on your phone, speaker, and other devices.
+            .pick-premium__payment-methods.mt-2.d-flex 
+               - for(let i = 1; i <= 4; i++) 
+                  img.pick-premium__payment(src=`../images/premium/payment${i}.svg`)
+               img.pick-premium__payment(src="../images/premium/payment5.png")
+         
+         .container.pick-premium__cards-wrapper  
+            // First card 
+            .premium-card.bg-white 
+               +premiumCardHeader('Individual', '9.99', 1)
+               ul.premium-card__list 
+                  +cardListItem('Listen to music ad-free')
+                  +cardListItem('Play anywhere - even offline')
+                  +cardListItem('On-demand playback')
+               +cardButton()
+               +termsAndConditionText(class="premium-card__terms mb-2")
+
+            // Second card 
+            .premium-card.bg-white 
+               +premiumCardHeader('Duo', '12.99', 2)
+               ul.premium-card__list 
+                  +cardListItem('2 Premium accounts for a couple under one roof')
+                  +cardListItem('Duo Mix: a playlist for two, regularly updated with music you both enjoy')
+                  +cardListItem('Ad-free music listening, play offline, on-demand playback')
+               +cardButton()
+               +termsAndConditionText(class="premium-card__terms mb-2")
+
+            // Third card 
+            .premium-card.bg-white 
+               +premiumCardHeader('Family', '15.99', 6)
+               ul.premium-card__list 
+                  +cardListItem('6 Premium accounts for family members living under one roof')
+                  +cardListItem('Family Mix: a playlist for your family, regularly updated with music you all enjoy')
+                  +cardListItem('Block explicit music')
+                  +cardListItem('Ad-free music listening, play offline, on-demand playback')
+                  +cardListItem('Spotify Kids: a separate app made just for kids')
+               +cardButton()
+               +termsAndConditionText(class="premium-card__terms mb-2")
+
+            // Fourth card 
+            .premium-card.bg-white 
+               +premiumCardHeader('Student', '4.99', 1)
+               ul.premium-card__list 
+                  +cardListItem('Hulu (ad-supported) plan')
+                  +cardListItem('SHOWTIME')
+                  +cardListItem('Listen to music ad-free')
+                  +cardListItem('Play anywhere - even offline')
+                  +cardListItem('On-demand playback')
+               +cardButton()
+               p.mb-3.premium-card__terms.
+                  Offer currently includes access to Hulu (ad-supported) plan and SHOWTIME Streaming Service, subject to eligibility. Available only to students at an accredited higher education institution. 1 month free only open to higher education students who haven't already tried Premium. 
+                  #[a(href="#") Terms and conditions apply].
+
+
+      // Footer 
+      +footer()

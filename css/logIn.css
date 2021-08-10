@@ -1,0 +1,271 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+/* Utility classes */
+@media (max-width: 767px) {
+  .mw-md-100 {
+    max-width: 100%;
+  }
+}
+
+select, html {
+  scrollbar-width: thin;
+  scrollbar-color: #1ed760 transparent;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:hover {
+  color: #1ed760;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html.active {
+  overflow-y: hidden;
+}
+
+/* Customize scrollbar in Chrome */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1ed760;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #159442;
+}
+
+.header {
+  padding: 1.25rem 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d9dadc;
+}
+
+.header__img {
+  width: 200px;
+  height: 67px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .header__img {
+    width: 125px;
+    height: 41px;
+  }
+}
+
+.main {
+  width: 480px;
+  padding: 0 15px;
+}
+
+.main__title {
+  font-size: 15px;
+}
+
+.main__buttons {
+  margin-top: 12px;
+  gap: 0.5rem;
+}
+
+.main__button {
+  letter-spacing: 2px;
+  border-radius: 50px;
+  color: white;
+  height: 48px;
+  font-size: 14px;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.main__button:hover {
+  color: white;
+}
+
+.main__button-icon {
+  font-size: 16px;
+}
+
+.main__button-img {
+  width: 13px;
+}
+
+.main__button--facebook {
+  background-color: #3b5a9a;
+}
+
+.main__button--facebook:hover {
+  background-color: #4d71bb;
+}
+
+.main__button--apple {
+  background-color: black;
+}
+
+.main__button--apple:hover {
+  background-color: #3a3c41;
+}
+
+.main__button--google, .main__button--phone, .main__button--spotify {
+  color: #616467;
+  border: 2px solid #616467;
+}
+
+.main__button--google:hover, .main__button--phone:hover, .main__button--spotify:hover {
+  background-color: #616467;
+  color: white;
+}
+
+.main__separator {
+  color: black;
+  font-size: 0.9rem;
+  gap: 1.25rem;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.main__separator::before, .main__separator::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d9dadc;
+}
+
+.main__label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.main__input {
+  outline: none;
+  font-size: 14px;
+  height: 40px;
+  padding: 6px 12px;
+  border: 1px solid #d9dadc;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+.main__input:focus {
+  border-color: #919496;
+}
+
+.main__input::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+.main__input:-ms-input-placeholder {
+  font-size: 14px;
+}
+
+.main__input::-ms-input-placeholder {
+  font-size: 14px;
+}
+
+.main__input::placeholder {
+  font-size: 14px;
+}
+
+.main__forget-password {
+  margin-bottom: 2rem;
+  font-size: 15px;
+  text-decoration: underline !important;
+  color: #575757;
+}
+
+.main__forget-password:hover {
+  color: #1db954;
+}
+
+@media (max-width: 575px) {
+  .main__forget-password {
+    margin-bottom: 3rem;
+  }
+}
+
+.main__checkbox-input {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #1ed760;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.main__checkbox-input::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 14px;
+  color: white;
+  position: absolute;
+}
+
+.main__checkbox-input:checked {
+  background-color: #1ed760;
+}
+
+.main__checkbox-label {
+  font-size: 14px;
+  color: #575757;
+  cursor: pointer;
+}
+
+.main__submit {
+  border-bottom: 1px solid #d9dadc;
+}
+
+.main__button--submit {
+  width: 210px;
+  background-color: #117a37;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.main__button--submit:hover {
+  background-color: #18aa4c;
+}
+
+@media (max-width: 767px) {
+  .main__button--submit {
+    width: 100%;
+  }
+}
+
+.main__footer {
+  margin-top: 2.25rem;
+}
+
+.main__footer-title {
+  font-size: 16px;
+  margin-bottom: 1.25rem;
+}

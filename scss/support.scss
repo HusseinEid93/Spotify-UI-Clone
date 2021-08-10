@@ -1,0 +1,175 @@
+@import "./partials/globals", "./partials/reset", "./partials/utilities",
+   "./partials/components";
+
+/* Start the header */
+@include navbarWithOverlay();
+
+/* Start .showcase section */
+.showcase {
+   padding: 5rem 0;
+   @include background-image(
+      url("../images/support/search-desktop.webp"),
+      100%,
+      top,
+      #1c2963
+   );
+   @media (max-width: 768px) {
+      background-image: url(../images/support/search-mobile.webp);
+      padding: 1.8rem 0 5rem;
+   }
+   &__heading {
+      font-size: 3.5rem;
+      @media (max-width: 767px) {
+         font-size: 2.5rem;
+      }
+      @media (max-width: 575px) {
+         line-height: 1.4;
+      }
+   }
+   &__form {
+      margin: 2.5rem 0 4rem;
+      width: 744px;
+      height: 52px;
+      border: 1px solid transparent;
+      &:hover {
+         border-color: black;
+      }
+      @media (max-width: 991px) {
+         width: 100%;
+         margin: 2.5rem 0 3rem;
+      }
+      @media (max-width: 767px) {
+         height: 44px;
+         margin: 1.7rem 0 3rem;
+      }
+   }
+   &__icon {
+      color: $darker-grey;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      &--close {
+         cursor: pointer;
+         right: 15px;
+         opacity: 0;
+         pointer-events: none;
+         &.active {
+            pointer-events: all;
+            opacity: 1;
+         }
+      }
+   }
+   &__input {
+      outline: none;
+      font-size: 14px;
+      &::placeholder {
+         font-size: 15px;
+      }
+   }
+   &__links-group {
+      width: 900px;
+      @media (max-width: 991px) {
+         width: 100%;
+         gap: 1.25rem;
+      }
+   }
+   &__link-item {
+      gap: 0.5rem;
+   }
+   &__link-title {
+      font-weight: 300;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #d9d9d9;
+   }
+   a {
+      font-weight: 500;
+      transition: 0;
+      &:hover {
+         text-decoration: underline !important;
+         color: white !important;
+      }
+   }
+}
+
+/* Start .lists section */
+.lists {
+   padding: 50px 0;
+   background-color: $extremely-light-grey;
+   @media (max-width: 991px) {
+      padding: 0;
+      background-color: white;
+   }
+   &__lists-group {
+      max-width: 950px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: start;
+      gap: 4rem;
+   }
+   &__list-header {
+      border-bottom: 1px solid darken($light-grey, 10);
+      cursor: pointer;
+   }
+   &__list-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.7rem;
+      @media (max-width: 991px) {
+         font-size: 1.4rem;
+         margin-bottom: 0;
+      }
+      @media (max-width: 767px) {
+         font-size: 1.2rem;
+      }
+   }
+   &__list-body {
+      background-color: $extremely-light-grey;
+      transition: 0.15s cubic-bezier(0.94, 0.06, 0.05, 0.95);
+   }
+   &__list-icon.active {
+      transform: rotate(180deg);
+   }
+   &__list-items {
+      gap: 1rem;
+   }
+   &__list-link {
+      font-weight: 700;
+      color: $dark-green;
+      &:hover {
+         text-decoration: underline !important;
+         color: $dark-green;
+      }
+   }
+}
+
+/* Start .questions section */
+.questions {
+   padding: 80px 0;
+   @media (max-width: 767px) {
+      padding: 60px 0;
+   }
+   &__heading {
+      font-size: 2.8rem;
+      @media (max-width: 991px) {
+         font-size: 2.3rem;
+      }
+      @media (max-width: 767px) {
+         font-size: 28px;
+      }
+   }
+   &__paragraph {
+      margin: 1.8rem 0;
+      font-weight: 500;
+      line-height: 1.5;
+      max-width: 500px;
+      @media (max-width: 767px) {
+         max-width: 100%;
+      }
+   }
+   &__button {
+      @include button($green, black, 13px 30px, lighten($green, 3));
+   }
+}
+
+/* Start the footer */
+@include footer();

@@ -1,0 +1,466 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+/* Utility classes */
+@media (max-width: 767px) {
+  .mw-md-100 {
+    max-width: 100%;
+  }
+}
+
+select, html {
+  scrollbar-width: thin;
+  scrollbar-color: #1ed760 transparent;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:hover {
+  color: #1ed760;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html.active {
+  overflow-y: hidden;
+}
+
+/* Customize scrollbar in Chrome */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1ed760;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #159442;
+}
+
+.main {
+  margin-bottom: 150px;
+  width: 498px;
+  padding: 0 24px;
+}
+
+@media (max-width: 767px) {
+  .main {
+    width: 450px !important;
+  }
+}
+
+.main__logo {
+  margin: 2.4rem 0 2.5rem;
+  width: 130px;
+}
+
+@media (max-width: 991px) {
+  .main__logo {
+    width: 95px !important;
+  }
+}
+
+.main__heading {
+  font-size: 27px;
+}
+
+@media (max-width: 767px) {
+  .main__heading {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 575px) {
+  .main__heading {
+    line-height: 1.5;
+  }
+}
+
+.main__facebook-btn {
+  margin: 1.8rem 0 1.25rem;
+  background-color: #1877f2;
+  color: white !important;
+  padding: 13px 33px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.main__facebook-btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #3085f3;
+}
+
+.main__terms-policy {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.main__terms {
+  margin-bottom: 0.8rem;
+}
+
+.main__policy {
+  line-height: 1.5;
+}
+
+.main__anchor {
+  text-decoration: underline !important;
+  color: #1db954;
+}
+
+.main__anchor:hover {
+  color: #31e270;
+}
+
+.main__separator {
+  color: #717171;
+  font-size: 0.9rem;
+  gap: 1.25rem;
+}
+
+.main__separator::before, .main__separator::after {
+  content: "";
+  width: 160px;
+  height: 1px;
+  background-color: #b8babb;
+}
+
+@media (max-width: 575px) {
+  .main__separator::before, .main__separator::after {
+    width: 105px;
+  }
+}
+
+.main__form-heading {
+  font-weight: 600;
+}
+
+.main__form {
+  gap: 1.5rem;
+}
+
+.main__label {
+  font-size: 13px;
+}
+
+.main__input {
+  height: 52px;
+  padding: 14px;
+  border: 1px solid #919496;
+  outline: none;
+}
+
+.main__input:focus {
+  border: 3px solid black;
+  padding: 12px;
+}
+
+.main__input::-webkit-input-placeholder {
+  color: black;
+  font-size: 15px;
+}
+
+.main__input:-ms-input-placeholder {
+  color: black;
+  font-size: 15px;
+}
+
+.main__input::-ms-input-placeholder {
+  color: black;
+  font-size: 15px;
+}
+
+.main__input::placeholder {
+  color: black;
+  font-size: 15px;
+}
+
+.main__input-note {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.main__birth {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 20% 25%;
+      grid-template-columns: 45% 20% 25%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main__select-month {
+  color: #575757;
+  border: 1px solid #575757;
+}
+
+.main__select-month i {
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+  color: #919496;
+}
+
+.main__input--select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 14px 10px;
+  font-size: 14px;
+}
+
+.main__input--select:focus {
+  border: 2px solid black !important;
+  padding: 12px 8px;
+}
+
+.main__radio-inputs {
+  gap: 1.25rem;
+}
+
+.main__label--gender {
+  font-weight: 500;
+}
+
+.main__radio-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 28px;
+  height: 28px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transition: 0.3s border-color;
+  transition: 0.3s border-color;
+}
+
+.main__radio-input::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #222326;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: border-width 0.1s;
+  transition: border-width 0.1s;
+}
+
+.main__radio-input:checked {
+  border-color: black;
+}
+
+.main__radio-input:checked::after {
+  border: 4px solid #117a37;
+}
+
+.main__input-group--checkbox label {
+  cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .main__input-group--checkbox {
+    max-width: 85%;
+    line-height: 1.7;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+.main__checkbox {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 28px;
+  height: 28px;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  background-color: transparent;
+  top: 9px;
+}
+
+.main__checkbox::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 9px;
+  color: white;
+  position: absolute;
+}
+
+.main__checkbox:checked {
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+  border-color: black;
+}
+
+.main__checkbox:checked::before {
+  border-color: #1ed760;
+}
+
+.main__checkbox:checked::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-color: #1ed760;
+}
+
+.main__checkbox::before {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #575757;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.main__checkbox::after {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border-radius: 3px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.main__robot {
+  width: 300px;
+  height: 74px;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+  color: black;
+  border: 1px solid #d3d3d3;
+  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.08);
+  padding: 4px 10px;
+}
+
+.main__robot-checkbox {
+  margin-right: 0.7rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #bec0c4;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.main__robot-checkbox::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 25px;
+  color: #1ed760;
+  position: absolute;
+}
+
+.main__robot-checkbox:checked {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.main__robot-checkbox:checked::before {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.main__robot-checkbox::before {
+  opacity: 0;
+}
+
+.main__robot-text {
+  cursor: pointer;
+}
+
+.main__robot-img {
+  color: #222326;
+}
+
+.main__robot-img img {
+  width: 32px;
+  height: 32px;
+}
+
+.main__robot-img span:first-of-type {
+  font-size: 9px;
+  margin-top: 2px;
+}
+
+.main__robot-img span:last-of-type {
+  font-size: 7px;
+}
+
+.main__sign-up-btn {
+  margin-top: -0.8rem;
+  background-color: #1ed760;
+  color: black !important;
+  padding: 17px 45px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.main__sign-up-btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #2de26d;
+}
+
+.main__log-in {
+  font-size: 14px;
+  font-weight: 500;
+}

@@ -1,0 +1,26 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+// Some variables
+$green: #1ed760;
+$semi-dark-green: #1db954;
+$dark-green: #117a37;
+$blue: #2941ab;
+$skyBlue1: #1d75de;
+$skyBlue2: #2e77d0;
+$Facebook: #1877f2;
+$Facebook-dark: #3b5a9a;
+$extremely-light-grey: #eee;
+$lighter-grey: #efefef;
+$light-grey: #d9dadc;
+$medium-grey: #919496;
+$darker-grey: #575757;
+$dark-grey: #222326;
+$poppins: "Poppins", sans-serif;
+
+/* Utility classes */
+.mw-md-100 {
+   @media (max-width: 767px) {
+      max-width: 100%;
+   }
+}

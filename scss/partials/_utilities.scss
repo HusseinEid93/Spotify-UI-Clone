@@ -1,0 +1,125 @@
+@mixin showHamburgerMenu {
+   .navbar__navigation {
+      right: 0;
+      opacity: 1;
+      transition: right 0.25s, opacity 0.25s;
+   }
+   .navbar__item {
+      opacity: 0;
+      transform: translateX(30%);
+      @for $i from 1 through 7 {
+         &:nth-of-type(#{$i}) {
+            animation: move
+               0.1s
+               #{$i /
+               30}s
+               cubic-bezier(0.57, 0.06, 0.79, 0.95)
+               forwards;
+            @keyframes move {
+               from {
+                  transform: translateX(30%);
+                  opacity: 0;
+               }
+               to {
+                  transform: translateX(0);
+                  opacity: 1;
+               }
+            }
+         }
+      }
+   }
+   .navbar__toggle {
+      span {
+         &:first-child {
+            transform: rotate(-45deg);
+         }
+         &:nth-child(2) {
+            opacity: 0;
+         }
+         &:last-child {
+            transform: rotate(45deg) translateX(3px);
+         }
+      }
+   }
+}
+
+@mixin background-image($url, $size, $position, $bgColor: $blue) {
+   background: {
+      image: $url;
+      size: $size;
+      position: $position;
+      repeat: no-repeat;
+      color: $bgColor;
+   }
+}
+
+@mixin button($bg, $color, $padding, $onHover, $font-size: 14px) {
+   background-color: $bg;
+   color: $color !important;
+   padding: $padding;
+   border-radius: 50px;
+   font-weight: 600;
+   font-size: $font-size;
+   &:hover {
+      transform: scale(1.05);
+      background-color: $onHover;
+   }
+}
+
+@mixin section-padding {
+   padding: 80px 0 120px;
+   @media (max-width: 767px) {
+      padding: 40px 0 80px;
+   }
+}
+
+@mixin terms-conditions($color: white, $hoverColor: white) {
+   font-weight: 500;
+   font-size: 0.7rem;
+   color: $color;
+   a {
+      text-decoration: underline !important;
+      &:hover {
+         color: $hoverColor;
+      }
+   }
+}
+
+@mixin checkbox(
+   $width,
+   $height,
+   $border,
+   $border-radius,
+   $bg,
+   $before-font-size,
+   $before-color
+) {
+   cursor: pointer;
+   appearance: none;
+   width: $width;
+   height: $height;
+   border: $border;
+   border-radius: $border-radius;
+   background-color: $bg;
+   &::before {
+      content: "\f00c";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: $before-font-size;
+      color: $before-color;
+      position: absolute;
+   }
+}
+
+@mixin separator($color, $line-width, $line-color) {
+   color: $color;
+   font-size: 0.9rem;
+   gap: 1.25rem;
+   &::before,
+   &::after {
+      content: "";
+      width: $line-width;
+      height: 1px;
+      background-color: $line-color;
+   }
+}

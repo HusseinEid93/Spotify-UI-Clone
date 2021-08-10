@@ -1,0 +1,214 @@
+<!DOCTYPE html >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/includes/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/support.css"/>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
+    <script src="../JS/navbar.js" defer="defer"> </script>
+    <title>Support - Spotify</title>
+  </head>
+  <body> 
+    <!-- Overlay  -->
+    <div class="position-absolute w-100" id="overlay"></div>
+    <!-- Header -->
+    <nav class="navbar w-100"> 
+      <div class="container h-100 justify-content-between d-flex align-items-center">
+        <div class="navbar__logo"><a class="d-block" href="../HTML/home.html"> <img class="w-100" src="../images/logo.png"/></a>
+        </div>
+        <ul class="navbar__navigation d-flex flex-column flex-lg-row align-items-lg-center align-items-start">
+          <li class="navbar__item"> <a class="d-block" href="../HTML/premium.html">Premium  </a></li>
+          <li class="navbar__item"> <a class="d-block" href="../HTML/support.html">Support  </a></li>
+          <li class="navbar__item"> <a class="d-block" href="../HTML/download.html">Download  </a></li>
+          <li class="navbar__item navbar__item--separator bg-white"> </li>
+          <li class="navbar__item navbar__item--signUp"> <a class="d-block" href="../HTML/signUp.html">Sign up </a></li>
+          <li class="navbar__item navbar__item--logIn"> <a class="d-block" href="../HTML/logIn.html">Log in </a></li>
+          <li class="navbar__item navbar__item--logo d-lg-none position-absolute"><a class="d-block" href="../HTML/home.html"> <img class="w-100" src="../images/logo.png"/></a>
+          </li>
+        </ul>
+        <div class="navbar__toggle flex-column d-lg-none position-relative d-flex justify-content-center"> <span class="w-100 bg-white rounded-sm"></span><span class="w-100 bg-white rounded-sm"></span><span class="w-100 bg-white rounded-sm"></span>
+        </div>
+      </div>
+    </nav>
+    <!-- Start the showcase section -->
+    <section class="showcase"> 
+      <div class="container mw-md-100 flex-column text-center text-white d-flex align-items-center"> 
+        <h1 class="m-0 showcase__heading font-weight-bold">How can we help you?</h1>
+        <form class="showcase__form position-relative overflow-hidden rounded"> <i class="showcase__icon showcase__icon--search ml-3 fas fa-search position-absolute"></i>
+          <input class="showcase__input w-100 h-100 py-2 px-5" type="text" placeholder="Search"/><i class="showcase__icon showcase__icon--close position-absolute fas fa-times"></i>
+        </form>
+        <div class="showcase__links-group d-flex justify-content-between flex-column flex-lg-row align-self-start align-self-lg-center text-left text-lg-center"> <span class="d-lg-none showcase__link-title text-uppercase">top solution  </span>
+          <div class="showcase__link-item d-flex flex-column"><span class="showcase__link-title text-uppercase d-none d-lg-block">payment help</span><a href="#">Price updates </a></div>
+          <div class="showcase__link-item d-flex flex-column"><span class="showcase__link-title text-uppercase d-none d-lg-block">subscription options</span><a href="#">Start or join Family plan </a></div>
+          <div class="showcase__link-item d-flex flex-column"><span class="showcase__link-title text-uppercase d-none d-lg-block">account help</span><a href="#">Can't reset password </a></div>
+          <div class="showcase__link-item d-flex flex-column"><span class="showcase__link-title text-uppercase d-none d-lg-block">account help</span><a href="#">Country or region settings </a></div>
+        </div>
+      </div>
+    </section>
+    <!-- Start .lists section for screens >= 768px-->
+    <section class="lists">
+      <div class="container d-none d-lg-block">  
+        <div class="lists__lists-group mx-auto">
+          <div class="lists__list">  
+            <div class="lists__list-title font-weight-bold">Account & Payment</div>
+            <ul class="lists__list-items d-flex flex-column"> 
+              <li class="text-capitalize"><a class="lists__list-link" href="#">account help </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">payment help </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">subscription options </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">premium family </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">premium duo </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">premium student </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">privacy &amp; security </a></li>
+            </ul>
+          </div>
+          <div class="lists__list">  
+            <div class="lists__list-title font-weight-bold">Using Spotify</div>
+            <ul class="lists__list-items d-flex flex-column"> 
+              <li class="text-capitalize"><a class="lists__list-link" href="#">getting started </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">playlists </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">features </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">systems &amp; settings </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">troubleshooting </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">ongoing issues </a></li>
+            </ul>
+          </div>
+          <div class="lists__list">  
+            <div class="lists__list-title font-weight-bold">Listen Everywhere </div>
+            <ul class="lists__list-items d-flex flex-column"> 
+              <li class="text-capitalize"><a class="lists__list-link" href="#">speakers </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">TVs </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">cars </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">car thing </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">gaming </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">smart watches </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">smart displays </a></li>
+              <li class="text-capitalize"><a class="lists__list-link" href="#">voice assistants </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Accordion for screens <= 767px -->
+      <div class="lists__accordion d-lg-none">
+        <!-- List 1 -->
+        <div class="lists__list"> 
+          <div class="lists__list-header py-3 px-3 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#list1"> 
+            <div class="lists__list-title font-weight-bold">Account & Payment </div><i class="lists__list-icon fas fa-chevron-down"> </i>
+          </div>
+          <div class="lists__list-body collapse" id="list1"> 
+            <div class="p-3">
+              <ul class="lists__list-items d-flex flex-column"> 
+                <li class="text-capitalize"><a class="lists__list-link" href="#">account help </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">payment help </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">subscription options </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">premium family </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">premium duo </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">premium student </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">privacy &amp; security </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- List 2-->
+        <div class="lists__list"> 
+          <div class="lists__list-header py-3 px-3 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#list2"> 
+            <div class="lists__list-title font-weight-bold">Using Spotify  </div><i class="lists__list-icon fas fa-chevron-down"> </i>
+          </div>
+          <div class="lists__list-body collapse" id="list2"> 
+            <div class="p-3">
+              <ul class="lists__list-items d-flex flex-column"> 
+                <li class="text-capitalize"><a class="lists__list-link" href="#">getting started </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">playlists </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">features </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">systems &amp; settings </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">troubleshooting </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">ongoing issues </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- List 3 -->
+        <div class="lists__list"> 
+          <div class="lists__list-header py-3 px-3 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#list3"> 
+            <div class="lists__list-title font-weight-bold">Listen Everywhere  </div><i class="lists__list-icon fas fa-chevron-down"> </i>
+          </div>
+          <div class="lists__list-body collapse" id="list3"> 
+            <div class="p-3">
+              <ul class="lists__list-items d-flex flex-column"> 
+                <li class="text-capitalize"><a class="lists__list-link" href="#">speakers </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">TVs </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">cars </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">car thing </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">gaming </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">smart watches </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">smart displays </a></li>
+                <li class="text-capitalize"><a class="lists__list-link" href="#">voice assistants </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start .questions section -->
+    <section class="questions text-center">
+      <div class="container mw-md-100 flex-column d-flex align-items-center"> 
+        <h1 class="m-0 questions__heading font-weight-bold">Visit the Community </h1>
+        <p class="questions__paragraph mx-auto">Have questions? Find answers from our worldwide Community of expert fans!  </p><a class="questions__button text-capitalize" href="#">Find Answers</a>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container mx-0 mx-md-auto"> 
+        <nav class="footer__navigation">
+          <div class="footer__logo mb-5 mb-lg-0"><a class="d-block" href="../HTML/home.html"> <img class="w-100" src="../images/logo.png"/></a>
+          </div>
+          <div class="footer__lists position-relative"> 
+            <ul class="footer__list">
+              <li class="footer__link footer__link--description text-uppercase">company</li>
+              <li class="footer__link"><a href="#">About</a></li>
+              <li class="footer__link"><a href="#">Jobs</a></li>
+              <li class="footer__link"><a href="#">For the Record</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__link footer__link--description text-uppercase">communities</li>
+              <li class="footer__link"><a href="#">For Artists</a></li>
+              <li class="footer__link"><a href="#">Developers</a></li>
+              <li class="footer__link"><a href="#">Advertising</a></li>
+              <li class="footer__link"><a href="#">Investors</a></li>
+              <li class="footer__link"><a href="#">Vendors</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__link footer__link--description text-uppercase">useful links</li>
+              <li class="footer__link"><a href="#">Support</a></li>
+              <li class="footer__link"><a href="#">Web Player</a></li>
+              <li class="footer__link"><a href="#">Free Mobile App</a></li>
+            </ul>
+          </div>
+          <div class="footer__socials d-flex position-relative">
+            <div class="footer__social d-flex align-items-center justify-content-center"><i class="fab fa-instagram"></i></div>
+            <div class="footer__social d-flex align-items-center justify-content-center"><i class="fab fa-twitter"></i></div>
+            <div class="footer__social d-flex align-items-center justify-content-center"><i class="fab fa-facebook-f"></i></div>
+          </div>
+        </nav>
+        <div class="footer__country justify-content-end d-flex align-items-center"><a href="#"> <i class="mr-2 fas fa-globe-americas"></i><span>USA</span></a></div>
+        <div class="footer__bottomLinks d-flex">
+          <ul class="footer__bottomList d-flex flex-wrap">
+            <li class="footer__bottomLink"> <a href="#">Legal</a></li>
+            <li class="footer__bottomLink"> <a href="#">Privacy Center</a></li>
+            <li class="footer__bottomLink"> <a href="#">Privacy Policy</a></li>
+            <li class="footer__bottomLink"> <a href="#">Cookies</a></li>
+            <li class="footer__bottomLink"> <a href="#">About Ads</a></li>
+            <li class="footer__bottomLink"> <a href="#">Additional CA privacy Disclosures</a></li>
+          </ul>
+          <div class="footer__copyright ml-auto" href="#">&copy; 2021 Spotify AB</div>
+        </div>
+      </div>
+    </footer>
+    <script src="../JS/utilities/jquery-3.5.1.min.js"></script>
+    <script src="../JS/utilities/bootstrap.min.js"> </script>
+    <script src="../JS/support.js"> </script>
+  </body>
+</html>

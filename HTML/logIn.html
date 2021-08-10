@@ -1,0 +1,45 @@
+<!DOCTYPE html >
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/includes/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/logIn.css"/>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
+    <title>Login - Spotify</title>
+  </head>
+  <body> 
+    <div class="header d-flex align-items-center justify-content-center"> <img class="header__img" src="../images/logIn/Spotify-black.png"/></div>
+    <main class="pb-2 main mw-100 mx-auto">
+      <h6 class="m-0 main__title text-center font-weight-bold">To continue, log in to Spotify. </h6>
+      <div class="main__buttons d-flex flex-column"> <a class="main__button font-weight-bold text-uppercase d-flex align-items-center justify-content-center main__button--facebook" href="#"> <i class="main__button-icon mr-3 fab fa-facebook"></i><span>continue with facebook</span></a><a class="main__button font-weight-bold text-uppercase d-flex align-items-center justify-content-center main__button--apple" href="#"> <i class="main__button-icon mr-3 fab fa-apple"></i><span>continue with Apple</span></a><a class="main__button font-weight-bold text-uppercase d-flex align-items-center justify-content-center main__button--google" href="#"> <img class="mr-3 main__button-img" src="../images/logIn/google.png"/><span>continue with google</span></a><a class="main__button font-weight-bold text-uppercase d-flex align-items-center justify-content-center main__button--phone" href="#"> <span>continue with phone number</span></a>
+      </div>
+      <div class="d-flex align-items-center justify-content-center main__separator mt-3 text-uppercase">or </div>
+      <!--Form -->
+      <form class="main__form w-100 mt-2">
+        <div class="main__input-group w-100 mb-2"> 
+          <label class="d-block main__label mb-2 font-weight-bold" for="username">Email address or username</label>
+          <input class="main__input rounded w-100 rounded-0" type="text" id="username" placeholder="Email address or username"/>
+        </div>
+        <div class="main__input-group w-100 mb-2"> 
+          <label class="d-block main__label mb-2 font-weight-bold" for="password">Password</label>
+          <input class="main__input rounded w-100 rounded-0" type="password" id="password" placeholder="Password"/>
+        </div><a class="d-block mt-3 main__forget-password" href="#">Forget your password? </a>
+        <div class="main__submit pb-3 d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-between w-100">
+          <div class="mb-md-0 mb-2 d-flex align-items-center"> 
+            <input class="mr-2 main__checkbox-input d-flex align-items-center justify-content-center" type="checkbox" id="remember-me"/>
+            <label class="mb-0 main__checkbox-label" for="remember-me">Remember me  </label>
+          </div>
+          <input class="main__button main__button--submit border-0 text-uppercase font-weight-bold" type="submit" value="log in"/>
+        </div>
+      </form>
+      <!-- end form -->
+      <div class="main__footer"> 
+        <h5 class="main__footer-title text-center font-weight-bold">Don't have an account?</h5><a class="main__button font-weight-bold text-uppercase d-flex align-items-center justify-content-center main__button--spotify" href="#"> <span>sign up for spotify</span></a>
+      </div>
+    </main>
+  </body>
+</html>

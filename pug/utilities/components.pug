@@ -1,0 +1,210 @@
+mixin HTMLHead(page, title, includeNavbar = true)
+   meta(charset="UTF-8")
+   meta(http-equiv="X-UA-Compatible" content="IE=edge")
+   meta(
+      name="viewport" 
+      content="width=device-width, initial-scale=1.0"
+   )
+   link(
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+   )
+   link(rel="stylesheet" href="../css/includes/bootstrap.css")
+   link(rel="stylesheet" href=`../css/${page}.css`)
+   // Favicon 
+   link(
+      rel="shortcut icon" 
+      type="image/png"
+      href="../images/favicon.png"
+   )
+   if(includeNavbar)
+      script(src="../JS/navbar.js" defer) 
+   title= title  
+
+
+mixin logo 
+   a.d-block(href="../HTML/home.html") 
+      img.w-100(src="../images/logo.png")
+
+
+mixin navbar 
+   nav.navbar.w-100 
+      .container.h-100.justify-content-between(class=centerVertically)
+         .navbar__logo: +logo()
+         
+         ul.navbar__navigation.d-flex.flex-column.flex-lg-row.align-items-lg-center.align-items-start
+            li.navbar__item 
+               a.d-block(href="../HTML/premium.html") Premium  
+            li.navbar__item 
+               a.d-block(href="../HTML/support.html") Support  
+            li.navbar__item 
+               a.d-block(href="../HTML/download.html") Download  
+            li(
+               class="navbar__item navbar__item--separator bg-white"
+            ) 
+            li.navbar__item.navbar__item--signUp 
+               a.d-block(href="../HTML/signUp.html") Sign up 
+            li.navbar__item.navbar__item--logIn 
+               a.d-block(href="../HTML/logIn.html") Log in 
+            li.navbar__item.navbar__item--logo.d-lg-none.position-absolute: +logo()
+
+         .navbar__toggle.flex-column.d-lg-none.position-relative(class=centerHorizontally) 
+            - for(let i = 1; i <= 3; i++) 
+               span.w-100.bg-white.rounded-sm
+
+
+mixin navbarWithOverlay 
+   // Overlay  
+   #overlay.position-absolute.w-100
+   // Header 
+   +navbar()
+
+
+mixin button(innerText)
+   a(href="#")&attributes(attributes) #{innerText}
+
+
+mixin footerList(listItems) 
+   ul.footer__list
+      li.footer__link.footer__link--description.text-uppercase= listItems[0]
+      - for(let i = 1; i < listItems.length; i++)
+         li.footer__link: a(href="#") #{listItems[i]}
+
+
+mixin footerSocial(fontAwesomeClasses) 
+   .footer__social(class=flex)
+      i(class=fontAwesomeClasses)
+
+
+mixin footer 
+   footer.footer
+      .container.mx-0.mx-md-auto 
+         nav.footer__navigation
+            .footer__logo.mb-5.mb-lg-0: +logo()
+            .footer__lists.position-relative 
+               each list in [footerList1, footerList2, footerList3]
+                  +footerList(list)
+            .footer__socials.d-flex.position-relative
+               +footerSocial(['fab', 'fa-instagram'])
+               +footerSocial(['fab', 'fa-twitter'])
+               +footerSocial(['fab', 'fa-facebook-f'])
+
+         .footer__country.justify-content-end(class=centerVertically)
+            a(href="#") 
+               i.mr-2(class="fas fa-globe-americas")
+               span USA
+
+         .footer__bottomLinks.d-flex
+            ul.footer__bottomList.d-flex.flex-wrap
+               each item in footerList4 
+                  li.footer__bottomLink 
+                     a(href="#") #{item}
+            .footer__copyright.ml-auto(href="#") &copy; 2021 Spotify AB
+
+
+mixin termsAndConditionText
+   div&attributes(attributes)  
+      a(href="#") Terms and conditions apply.
+      span.ml-1 1 month free not available for users who have already tried Premium. 
+
+
+mixin premiumFeature(img, heading, description) 
+   .feature.flex-row.flex-xl-column.text-xl-center.mb-xl-0&attributes(attributes)(class=centerVertically) 
+      img.feature__img.rounded-circle.mb-xl-5.mb-0(src=`../images/premium/img${img}.png`)
+      .feature__text.position-relative
+         h5.feature__heading.font-weight-bold= heading 
+         p.feature__desc.mb-0= description 
+
+
+mixin premiumCardHeader(heading, price, accounts)  
+   .premium-card__header.d-flex.flex-column.align-items-start
+      h6.premium-card__badge.py-1.px-2.font-weight-bold.text-white.rounded-sm.m-0 1 month free 
+      h5.premium-card__heading.font-weight-bold.mt-2.mb-1= heading 
+      p.mb-0.premium-card__price $#{price}/month after offer period
+      p.m-0 #{accounts} #{accounts > 1? 'accounts' : 'account'} 
+   hr.border-0.my-4
+
+
+mixin cardListItem(text)
+   li.mb-1.premium-card__listItem.d-flex.align-items-start 
+      img(src="../images/premium/check.png")
+      p.m-0= text 
+
+
+mixin cardButton 
+   +button('get started')(class="mt-4 mb-xl-4 mb-3 premium-card__button d-block mx-auto text-center text-uppercase")
+
+
+mixin supportPageList(list)
+   ul.lists__list-items.d-flex.flex-column 
+      each item in list   
+         li.text-capitalize: a.lists__list-link(href="#") #{item} 
+
+
+mixin privacyPolicy 
+   .main__terms-policy&attributes(attributes)
+      p.main__terms 
+         span By clicking on sign-up, you agree to Spotify's 
+         a.main__anchor(href="#") Terms and Conditions of Use. 
+      p.m-0.main__policy 
+         span.
+            To learn more about how Spotify collects, uses, shares and protects your personal data, please see 
+         a(href="#").main__anchor Spotify's Privacy Policy
+
+
+mixin separator 
+   div&attributes(attributes) or 
+
+
+mixin loginButton(name, icon, text, img = false)
+   a.main__button.font-weight-bold.text-uppercase(href="#" class=flex class=`main__button--${name}`) 
+      if(icon) 
+         i.main__button-icon.mr-3(class=icon)
+      if(img)
+         img.mr-3.main__button-img(src="../images/logIn/google.png")
+      span= text 
+
+
+mixin formInputGroup(label, type, id, placeholder)
+   .main__input-group.w-100(class=attributes.class) 
+      label.d-block.main__label.mb-2.font-weight-bold(for=id)= label 
+      input.main__input.rounded.w-100(
+         class=attributes.rounded
+         type=type 
+         id=id 
+         placeholder=placeholder
+      ) 
+
+
+mixin selectMonth(selectOptions) 
+   .main__birth-month.d-flex.flex-column 
+      label.main__label.main__label--month.mb-2(for="month") Month 
+      div.main__select-month.justify-content-between.overflow-hidden.position-relative.rounded(class=centerVertically)
+         select.border-0.main__input.main__input--select.w-100(name="month" id="month")
+            each item, index in selectOptions 
+               if(index === 0)
+                  option(value=item selected disabled)= item 
+               else 
+                  option(value=item)= item  
+         i.position-absolute(class="fas fa-chevron-down")
+
+
+mixin enterDayOrYear(dayOrYear) 
+   div(class=`main__birth-${dayOrYear} d-flex flex-column`)
+      label(
+         for=dayOrYear 
+         class=`main__label main__label--${dayOrYear} mb-2`
+         ) #{dayOrYear.replace(/\b\w/g, l => l.toUpperCase())} 
+      input(
+         class='rounded main__input'
+         type="text"
+         id=dayOrYear 
+         placeholder=`${dayOrYear === 'day' ? 'DD' : 'YYYY'}`
+      )
+
+
+mixin radioInputGroup(type) 
+   .main__radio-input-group(class=centerVertically) 
+      input.main__radio-input.rounded-circle.mr-1(type="radio" name="gender" id=type)
+      label.m-0(class=centerVertically for=type) 
+         span.main__label.main__label--gender(for=type) #{type.replace(/\b\w/, l => l.toUpperCase())}

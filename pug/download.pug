@@ -1,0 +1,61 @@
+include utilities/globals
+include utilities/components
+
+doctype html 
+html(lang="en")
+   head 
+      +HTMLHead('download', 'Windows download - Spotify')
+   body 
+      +navbarWithOverlay() 
+
+      // Start showcase section 
+      section.showcase 
+         .container.flex-column(class=centerVertically) 
+            .showcase__figure.position-relative 
+               img.showcase__laptop.w-100.h-100(src="../images/download/laptop-large.svg")
+               img.showcase__img.showcase__img--green-circle.position-absolute(src="../images/download/green-circle.svg")
+               img.showcase__img.showcase__img--success-check.position-absolute(src="../images/download/green-success-check.svg")
+
+            h1.showcase__heading Download Spotify 
+            p.m-0.showcase__desc.
+               Play millions of songs on your device.
+            +button('Download')(class="showcase__button text-capitalize")
+
+      
+      // Start download section  
+      section.download 
+         .container.text-center.flex-column.mw-md-100(class=centerVertically)
+            h2.m-0.download__heading.
+               Bring your music to mobile and tablet, too. 
+            p.my-4.download__paragraph.
+               Listening on your phone or tablet is free, easy, and fun.
+            .download__methods.d-flex.align-items-center.flex-wrap.justify-content-center
+               - for(let i = 1; i <= 4; i++)
+                  a.download__method(href="#")
+                     img.img-fluid.download__img(
+                        src=`../images/download/method${i}.png`
+                        class=`${i === 4 ? 'download__img--amazon' : ''}`
+                     ) 
+
+      
+      // Start devices section
+      section.devices 
+         .container.text-center.flex-column.mw-md-100(class=centerVertically) 
+            img.devices__img(src="../images/download/all-devices.svg")
+            h3.devices__title One account, listen everywhere.
+            ul.devices__list.d-flex.flex-wrap.flex-column.flex-md-row.align-items-center.justify-content-center 
+               li.mb-3.m-md-0.devices__item mobile
+               li.mb-3.m-md-0.devices__item computer 
+               li.mb-3.m-md-0.devices__item tablet 
+               li.mb-3.m-md-0.devices__item: a.d-inline-block.devices__link(href="#") car 
+               li.mb-3.m-md-0.devices__item: a.d-inline-block.devices__link(href="#") playstation #[span.devices__trademark &reg;]
+               li.mb-3.m-md-0.devices__item: a.d-inline-block.devices__link(href="#") xbox 
+               li.mb-3.m-md-0.devices__item: a.d-inline-block.devices__link(href="#") tv   
+               li.mb-3.m-md-0.devices__item: a.d-inline-block.devices__link(href="#") speaker    
+               li.devices__item: a.d-inline-block.devices__link(href="#") web player    
+
+
+      // Footer 
+      +footer()
+
+      script(src="../JS/download.js") 

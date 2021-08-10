@@ -1,0 +1,114 @@
+<!DOCTYPE html >
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/includes/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/signUp.css"/>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
+    <title>Sign up - Spotify</title>
+  </head>
+  <body> 
+    <main class="main mx-auto mw-100 flex-column d-flex align-items-center"> 
+      <div class="main__logo"> <img class="w-100" src="../images/signUp/Spotify-black.png"/></div>
+      <h1 class="m-0 main__heading font-weight-bold text-center">Sign up for free to start listening.</h1><a class="main__facebook-btn" href="#">Sign up with Facebook</a>
+      <div class="main__terms-policy">
+        <p class="main__terms"> <span>By clicking on sign-up, you agree to Spotify's </span><a class="main__anchor" href="#">Terms and Conditions of Use. </a></p>
+        <p class="m-0 main__policy"> <span>To learn more about how Spotify collects, uses, shares and protects your personal data, please see </span><a class="main__anchor" href="#">Spotify's Privacy Policy</a></p>
+      </div>
+      <div class="d-flex align-items-center main__separator mt-3">or </div>
+      <!-- Start the form -->
+      <div class="main__form-container w-100"> 
+        <h6 class="mb-0 mt-4 main__form-heading text-center">Sign up with your email address</h6>
+        <form class="mt-4 main__form flex-column d-flex align-items-center">
+          <div class="main__input-group w-100"> 
+            <label class="d-block main__label mb-2 font-weight-bold" for="email">What's your email?</label>
+            <input class="main__input rounded w-100" type="email" id="email" placeholder="Enter your email."/>
+          </div>
+          <div class="main__input-group w-100"> 
+            <label class="d-block main__label mb-2 font-weight-bold" for="confirm">Confirm your email</label>
+            <input class="main__input rounded w-100" type="email" id="confirm" placeholder="Enter your email again."/>
+          </div>
+          <div class="main__input-group w-100"> 
+            <label class="d-block main__label mb-2 font-weight-bold" for="password">Create a password</label>
+            <input class="main__input rounded w-100" type="password" id="password" placeholder="Create a password."/>
+          </div>
+          <div class="w-100">
+            <div class="main__input-group w-100"> 
+              <label class="d-block main__label mb-2 font-weight-bold" for="name">What should we call you?</label>
+              <input class="main__input rounded w-100" type="text" id="name" placeholder="Enter a profile name."/>
+            </div><span class="d-block mt-2 main__input-note">This appears on your profile.</span>
+          </div>
+          <div class="main__input-group w-100"> <span class="d-block main__label mb-2 font-weight-bold">What's your date of birth?</span>
+            <div class="main__birth mt-2"> 
+              <div class="main__birth-month d-flex flex-column"> 
+                <label class="main__label main__label--month mb-2" for="month">Month </label>
+                <div class="main__select-month justify-content-between overflow-hidden position-relative rounded d-flex align-items-center">
+                  <select class="border-0 main__input main__input--select w-100" name="month" id="month">
+                    <option value="Month" selected="selected" disabled="disabled">Month</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                  </select><i class="position-absolute fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="main__birth-day d-flex flex-column">
+                <label class="main__label main__label--day mb-2" for="day">Day </label>
+                <input class="rounded main__input" type="text" id="day" placeholder="DD"/>
+              </div>
+              <div class="main__birth-year d-flex flex-column">
+                <label class="main__label main__label--year mb-2" for="year">Year </label>
+                <input class="rounded main__input" type="text" id="year" placeholder="YYYY"/>
+              </div>
+            </div>
+          </div>
+          <div class="main__input-group w-100">
+            <label class="d-block main__label m-0 font-weight-bold" for="gender">What's your gender?</label>
+            <div class="main__radio-inputs mt-2 d-flex"> 
+              <div class="main__radio-input-group d-flex align-items-center"> 
+                <input class="main__radio-input rounded-circle mr-1" type="radio" name="gender" id="male"/>
+                <label class="m-0 d-flex align-items-center" for="male"> <span class="main__label main__label--gender" for="male">Male</span></label>
+              </div>
+              <div class="main__radio-input-group d-flex align-items-center"> 
+                <input class="main__radio-input rounded-circle mr-1" type="radio" name="gender" id="female"/>
+                <label class="m-0 d-flex align-items-center" for="female"> <span class="main__label main__label--gender" for="female">Female</span></label>
+              </div>
+              <div class="main__radio-input-group d-flex align-items-center"> 
+                <input class="main__radio-input rounded-circle mr-1" type="radio" name="gender" id="non-binary"/>
+                <label class="m-0 d-flex align-items-center" for="non-binary"> <span class="main__label main__label--gender" for="non-binary">Non-binary</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="main__input-group main__input-group--checkbox w-100">
+            <label class="m-0 main__label" for="checkbox">
+              <input class="main__checkbox d-inline-flex position-relative d-flex align-items-center justify-content-center" type="checkbox" id="checkbox"/><span class="input__label ml-1">Share my registration data with Spotify's content providers for marketing purposes.</span>
+            </label>
+          </div>
+          <div class="main__robot align-self-start mt-2 d-flex align-items-center"> 
+            <input class="main__robot-checkbox position-relative d-flex align-items-center justify-content-center" type="checkbox" id="robot"/>
+            <label class="m-0 main__robot-text main__label" for="robot">I'm not a robot</label>
+            <div class="main__robot-img ml-auto h-100 flex-column d-flex align-items-center justify-content-center"><img src="../images/signUp/robot.png"/><span>reCAPTCHA</span><span>Privacy - Terms </span></div>
+          </div>
+          <div class="main__terms-policy text-center">
+            <p class="main__terms"> <span>By clicking on sign-up, you agree to Spotify's </span><a class="main__anchor" href="#">Terms and Conditions of Use. </a></p>
+            <p class="m-0 main__policy"> <span>To learn more about how Spotify collects, uses, shares and protects your personal data, please see </span><a class="main__anchor" href="#">Spotify's Privacy Policy</a></p>
+          </div>
+          <input class="main__sign-up-btn border-0" type="submit" value="Sign up"/>
+        </form>
+      </div>
+      <div class="main__log-in text-center mt-4">Have an account? <a class="main__anchor" href="#">Log in</a>. </div>
+    </main>
+  </body>
+</html>

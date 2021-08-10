@@ -1,0 +1,256 @@
+@import "./partials/globals", "./partials/reset", "./partials/utilities",
+   "./partials/components";
+
+.main {
+   margin-bottom: 150px;
+   width: 498px;
+   padding: 0 24px;
+   @media (max-width: 767px) {
+      width: 450px !important;
+   }
+   &__logo {
+      margin: 2.4rem 0 2.5rem;
+      @include logo();
+   }
+   &__heading {
+      font-size: 27px;
+      @media (max-width: 767px) {
+         font-size: 23px;
+      }
+      @media (max-width: 575px) {
+         line-height: 1.5;
+      }
+   }
+   &__facebook-btn {
+      margin: 1.8rem 0 1.25rem;
+      @include button($Facebook, white, 13px 33px, lighten($Facebook, 5));
+   }
+   &__terms-policy {
+      font-size: 11px;
+      font-weight: 500;
+   }
+   &__terms {
+      margin-bottom: 0.8rem;
+   }
+   &__policy {
+      line-height: 1.5;
+   }
+   &__anchor {
+      text-decoration: underline !important;
+      color: $semi-dark-green;
+      &:hover {
+         color: lighten($green, 6);
+      }
+   }
+   &__separator {
+      @include separator(
+         lighten($darker-grey, 10),
+         160px,
+         lighten($medium-grey, 15)
+      );
+      @media (max-width: 575px) {
+         &::before,
+         &::after {
+            width: 105px;
+         }
+      }
+   }
+   &__form-heading {
+      font-weight: 600;
+   }
+   &__form {
+      gap: 1.5rem;
+   }
+   &__label {
+      font-size: 13px;
+   }
+   &__input {
+      height: 52px;
+      padding: 14px;
+      border: 1px solid $medium-grey;
+      outline: none;
+      &:focus {
+         border: 3px solid black;
+         padding: 12px;
+      }
+      &::placeholder {
+         color: black;
+         font-size: 15px;
+      }
+   }
+   &__input-note {
+      font-size: 12px;
+      font-weight: 500;
+   }
+   &__birth {
+      display: grid;
+      grid-template-columns: 45% 20% 25%;
+      align-items: center;
+      justify-content: space-between;
+   }
+   &__select-month {
+      color: $darker-grey;
+      border: 1px solid $darker-grey;
+      i {
+         right: 10px;
+         top: 50%;
+         transform: translateY(-50%);
+         pointer-events: none;
+         color: $medium-grey;
+      }
+   }
+   &__input--select {
+      appearance: none;
+      padding: 14px 10px;
+      font-size: 14px;
+      &:focus {
+         border: 2px solid black !important;
+         padding: 12px 8px;
+      }
+   }
+   &__radio-inputs {
+      gap: 1.25rem;
+   }
+   &__label--gender {
+      font-weight: 500;
+   }
+   &__radio-input {
+      appearance: none;
+      width: 28px;
+      height: 28px;
+      border: 3px solid transparent;
+      border-radius: 50%;
+      position: relative;
+      transition: 0.3s border-color;
+      &::after {
+         content: "";
+         position: absolute;
+         width: 16px;
+         height: 16px;
+         border: 1px solid $dark-grey;
+         border-radius: 50%;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         transition: border-width 0.1s;
+      }
+      &:checked {
+         border-color: black;
+         &::after {
+            border: 4px solid $dark-green;
+         }
+      }
+   }
+   &__input-group--checkbox {
+      label {
+         cursor: pointer;
+      }
+      @media (max-width: 575px) {
+         max-width: 85%;
+         line-height: 1.7;
+         align-self: flex-start;
+      }
+   }
+   &__checkbox {
+      @include checkbox(
+         28px,
+         28px,
+         3px solid transparent,
+         5px,
+         transparent,
+         9px,
+         white
+      );
+      top: 9px;
+      &:checked {
+         transition: border-color 0.2s;
+         border-color: black;
+         &::before {
+            border-color: $green;
+         }
+         &::after {
+            transform: scale(1);
+            background-color: $green;
+         }
+      }
+      &::before {
+         width: 16px;
+         height: 16px;
+         border: 1px solid $darker-grey;
+         border-radius: 3px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         transition: background-color 0.2s, border-color 0.2s;
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         z-index: -5;
+         width: 16px;
+         height: 16px;
+         background-color: transparent;
+         border-radius: 3px;
+         transform: scale(0);
+         transition: transform 0.2s;
+      }
+   }
+   &__robot {
+      width: 300px;
+      height: 74px;
+      border-radius: 3px;
+      background-color: #f9f9f9;
+      color: black;
+      border: 1px solid #d3d3d3;
+      box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.08);
+      padding: 4px 10px;
+   }
+   &__robot-checkbox {
+      margin-right: 0.7rem;
+      @include checkbox(
+         30px,
+         30px,
+         3px solid darken($light-grey, 10),
+         3px,
+         white,
+         25px,
+         $green
+      );
+      &:checked {
+         background-color: transparent;
+         border-color: transparent;
+         &::before {
+            opacity: 1;
+            transition: opacity 0.3s;
+         }
+      }
+      &::before {
+         opacity: 0;
+      }
+   }
+   &__robot-text {
+      cursor: pointer;
+   }
+   &__robot-img {
+      color: $dark-grey;
+      img {
+         width: 32px;
+         height: 32px;
+      }
+      span:first-of-type {
+         font-size: 9px;
+         margin-top: 2px;
+      }
+      span:last-of-type {
+         font-size: 7px;
+      }
+   }
+   &__sign-up-btn {
+      margin-top: -0.8rem;
+      @include button($green, black, 17px 45px, lighten($green, 5));
+   }
+   &__log-in {
+      font-size: 14px;
+      font-weight: 500;
+   }
+}

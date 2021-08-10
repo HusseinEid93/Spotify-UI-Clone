@@ -1,0 +1,239 @@
+<!DOCTYPE html >
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/includes/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/premium.css"/>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
+    <script src="../JS/navbar.js" defer="defer"> </script>
+    <title>Spotify Premium - Spotify(US)</title>
+  </head>
+  <body> 
+    <!-- Overlay  -->
+    <div class="position-absolute w-100" id="overlay"></div>
+    <!-- Header -->
+    <nav class="navbar w-100"> 
+      <div class="container h-100 justify-content-between d-flex align-items-center">
+        <div class="navbar__logo"><a class="d-block" href="../HTML/home.html"> <img class="w-100" src="../images/logo.png"/></a>
+        </div>
+        <ul class="navbar__navigation d-flex flex-column flex-lg-row align-items-lg-center align-items-start">
+          <li class="navbar__item"> <a class="d-block" href="../HTML/premium.html">Premium  </a></li>
+          <li class="navbar__item"> <a class="d-block" href="../HTML/support.html">Support  </a></li>
+          <li class="navbar__item"> <a class="d-block" href="../HTML/download.html">Download  </a></li>
+          <li class="navbar__item navbar__item--separator bg-white"> </li>
+          <li class="navbar__item navbar__item--signUp"> <a class="d-block" href="../HTML/signUp.html">Sign up </a></li>
+          <li class="navbar__item navbar__item--logIn"> <a class="d-block" href="../HTML/logIn.html">Log in </a></li>
+          <li class="navbar__item navbar__item--logo d-lg-none position-absolute"><a class="d-block" href="../HTML/home.html"> <img class="w-100" src="../images/logo.png"/></a>
+          </li>
+        </ul>
+        <div class="navbar__toggle flex-column d-lg-none position-relative d-flex justify-content-center"> <span class="w-100 bg-white rounded-sm"></span><span class="w-100 bg-white rounded-sm"></span><span class="w-100 bg-white rounded-sm"></span>
+        </div>
+      </div>
+    </nav>
+    <section class="showcase text-white">
+      <div class="container mw-md-100 d-flex flex-column"> 
+        <h1 class="mb-0 font-weight-bold showcase__heading">Get Premium free for 1 month</h1>
+        <p class="mb-0 showcase__paragraph">Only $9.99 after. Cancel anytime.</p>
+        <div class="showcase__buttons mt-2 mt-sm-3 mt-md-0 w-100 mx-auto d-flex flex-column flex-md-row"><a class="showcase__btn showcase__btn--black text-center text-uppercase" href="#">get started</a><a class="showcase__btn showcase__btn--transparent text-center text-uppercase" href="#">view plans</a>
+        </div>
+        <div class="showcase__terms mt-4 mb-3 mt-sm-2 mb-sm-3 mb-md-0"> <a href="#">Terms and conditions apply.</a><span class="ml-1">1 month free not available for users who have already tried Premium. </span></div>
+      </div>
+    </section>
+    <section class="go-premium">
+      <h1 class="go-premium__heading text-center">Why go Premium?</h1>
+      <div class="container mw-md-100">
+        <div class="feature flex-row flex-xl-column text-xl-center mb-xl-0 d-flex align-items-center"> <img class="feature__img rounded-circle mb-xl-5 mb-0" src="../images/premium/img1.png"/>
+          <div class="feature__text position-relative">
+            <h5 class="feature__heading font-weight-bold">Download music.</h5>
+            <p class="feature__desc mb-0">Listen anywhere.</p>
+          </div>
+        </div>
+        <div class="feature flex-row flex-xl-column text-xl-center mb-xl-0 d-flex align-items-center"> <img class="feature__img rounded-circle mb-xl-5 mb-0" src="../images/premium/img2.png"/>
+          <div class="feature__text position-relative">
+            <h5 class="feature__heading font-weight-bold">No ad interruptions.</h5>
+            <p class="feature__desc mb-0">Enjoy nonstop music.</p>
+          </div>
+        </div>
+        <div class="feature flex-row flex-xl-column text-xl-center mb-xl-0 d-flex align-items-center"> <img class="feature__img rounded-circle mb-xl-5 mb-0" src="../images/premium/img3.png"/>
+          <div class="feature__text position-relative">
+            <h5 class="feature__heading font-weight-bold">Play any song.</h5>
+            <p class="feature__desc mb-0">Even on mobile.</p>
+          </div>
+        </div>
+        <div class="feature flex-row flex-xl-column text-xl-center mb-xl-0 d-flex align-items-center mb-4 mb-sm-0"> <img class="feature__img rounded-circle mb-xl-5 mb-0" src="../images/premium/img4.png"/>
+          <div class="feature__text position-relative">
+            <h5 class="feature__heading font-weight-bold">Unlimited skips.</h5>
+            <p class="feature__desc mb-0">Just hit next.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pick-premium">
+      <div class="pick-premium__header mb-5 flex-column d-flex align-items-center"> 
+        <h2 class="pick-premium__heading font-weight-bold m-0">Pick your Premium</h2>
+        <p class="pick-premium__desc text-center m-0">Listen without limits on your phone, speaker, and other devices.</p>
+        <div class="pick-premium__payment-methods mt-2 d-flex"> <img class="pick-premium__payment" src="../images/premium/payment1.svg"/><img class="pick-premium__payment" src="../images/premium/payment2.svg"/><img class="pick-premium__payment" src="../images/premium/payment3.svg"/><img class="pick-premium__payment" src="../images/premium/payment4.svg"/><img class="pick-premium__payment" src="../images/premium/payment5.png"/>
+        </div>
+      </div>
+      <div class="container pick-premium__cards-wrapper"> 
+        <!-- First card -->
+        <div class="premium-card bg-white"> 
+          <div class="premium-card__header d-flex flex-column align-items-start">
+            <h6 class="premium-card__badge py-1 px-2 font-weight-bold text-white rounded-sm m-0">1 month free </h6>
+            <h5 class="premium-card__heading font-weight-bold mt-2 mb-1">Individual</h5>
+            <p class="mb-0 premium-card__price">$9.99/month after offer period</p>
+            <p class="m-0">1 account </p>
+          </div>
+          <hr class="border-0 my-4"/>
+          <ul class="premium-card__list"> 
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">Listen to music ad-free</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">Play anywhere - even offline</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">On-demand playback</p>
+            </li>
+          </ul><a class="mt-4 mb-xl-4 mb-3 premium-card__button d-block mx-auto text-center text-uppercase" href="#">get started</a>
+          <div class="premium-card__terms mb-2"> <a href="#">Terms and conditions apply.</a><span class="ml-1">1 month free not available for users who have already tried Premium. </span></div>
+        </div>
+        <!-- Second card -->
+        <div class="premium-card bg-white"> 
+          <div class="premium-card__header d-flex flex-column align-items-start">
+            <h6 class="premium-card__badge py-1 px-2 font-weight-bold text-white rounded-sm m-0">1 month free </h6>
+            <h5 class="premium-card__heading font-weight-bold mt-2 mb-1">Duo</h5>
+            <p class="mb-0 premium-card__price">$12.99/month after offer period</p>
+            <p class="m-0">2 accounts </p>
+          </div>
+          <hr class="border-0 my-4"/>
+          <ul class="premium-card__list"> 
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">2 Premium accounts for a couple under one roof</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">Duo Mix: a playlist for two, regularly updated with music you both enjoy</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">Ad-free music listening, play offline, on-demand playback</p>
+            </li>
+          </ul><a class="mt-4 mb-xl-4 mb-3 premium-card__button d-block mx-auto text-center text-uppercase" href="#">get started</a>
+          <div class="premium-card__terms mb-2"> <a href="#">Terms and conditions apply.</a><span class="ml-1">1 month free not available for users who have already tried Premium. </span></div>
+        </div>
+        <!-- Third card -->
+        <div class="premium-card bg-white"> 
+          <div class="premium-card__header d-flex flex-column align-items-start">
+            <h6 class="premium-card__badge py-1 px-2 font-weight-bold text-white rounded-sm m-0">1 month free </h6>
+            <h5 class="premium-card__heading font-weight-bold mt-2 mb-1">Family</h5>
+            <p class="mb-0 premium-card__price">$15.99/month after offer period</p>
+            <p class="m-0">6 accounts </p>
+          </div>
+          <hr class="border-0 my-4"/>
+          <ul class="premium-card__list"> 
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">6 Premium accounts for family members living under one roof</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">Family Mix: a playlist for your family, regularly updated with music you all enjoy</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">Block explicit music</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">Ad-free music listening, play offline, on-demand playback</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">Spotify Kids: a separate app made just for kids</p>
+            </li>
+          </ul><a class="mt-4 mb-xl-4 mb-3 premium-card__button d-block mx-auto text-center text-uppercase" href="#">get started</a>
+          <div class="premium-card__terms mb-2"> <a href="#">Terms and conditions apply.</a><span class="ml-1">1 month free not available for users who have already tried Premium. </span></div>
+        </div>
+        <!-- Fourth card -->
+        <div class="premium-card bg-white"> 
+          <div class="premium-card__header d-flex flex-column align-items-start">
+            <h6 class="premium-card__badge py-1 px-2 font-weight-bold text-white rounded-sm m-0">1 month free </h6>
+            <h5 class="premium-card__heading font-weight-bold mt-2 mb-1">Student</h5>
+            <p class="mb-0 premium-card__price">$4.99/month after offer period</p>
+            <p class="m-0">1 account </p>
+          </div>
+          <hr class="border-0 my-4"/>
+          <ul class="premium-card__list"> 
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">Hulu (ad-supported) plan</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">SHOWTIME</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">Listen to music ad-free</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">Play anywhere - even offline</p>
+            </li>
+            <li class="mb-1 premium-card__listItem d-flex align-items-start"> <img src="../images/premium/check.png"/>
+              <p class="m-0">On-demand playback</p>
+            </li>
+          </ul><a class="mt-4 mb-xl-4 mb-3 premium-card__button d-block mx-auto text-center text-uppercase" href="#">get started</a>
+          <p class="mb-3 premium-card__terms">
+            Offer currently includes access to Hulu (ad-supported) plan and SHOWTIME Streaming Service, subject to eligibility. Available only to students at an accredited higher education institution. 1 month free only open to higher education students who haven't already tried Premium. 
+            <a href="#">Terms and conditions apply</a>.
+            
+            
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container mx-0 mx-md-auto"> 
+        <nav class="footer__navigation">
+          <div class="footer__logo mb-5 mb-lg-0"><a class="d-block" href="../HTML/home.html"> <img class="w-100" src="../images/logo.png"/></a>
+          </div>
+          <div class="footer__lists position-relative"> 
+            <ul class="footer__list">
+              <li class="footer__link footer__link--description text-uppercase">company</li>
+              <li class="footer__link"><a href="#">About</a></li>
+              <li class="footer__link"><a href="#">Jobs</a></li>
+              <li class="footer__link"><a href="#">For the Record</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__link footer__link--description text-uppercase">communities</li>
+              <li class="footer__link"><a href="#">For Artists</a></li>
+              <li class="footer__link"><a href="#">Developers</a></li>
+              <li class="footer__link"><a href="#">Advertising</a></li>
+              <li class="footer__link"><a href="#">Investors</a></li>
+              <li class="footer__link"><a href="#">Vendors</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__link footer__link--description text-uppercase">useful links</li>
+              <li class="footer__link"><a href="#">Support</a></li>
+              <li class="footer__link"><a href="#">Web Player</a></li>
+              <li class="footer__link"><a href="#">Free Mobile App</a></li>
+            </ul>
+          </div>
+          <div class="footer__socials d-flex position-relative">
+            <div class="footer__social d-flex align-items-center justify-content-center"><i class="fab fa-instagram"></i></div>
+            <div class="footer__social d-flex align-items-center justify-content-center"><i class="fab fa-twitter"></i></div>
+            <div class="footer__social d-flex align-items-center justify-content-center"><i class="fab fa-facebook-f"></i></div>
+          </div>
+        </nav>
+        <div class="footer__country justify-content-end d-flex align-items-center"><a href="#"> <i class="mr-2 fas fa-globe-americas"></i><span>USA</span></a></div>
+        <div class="footer__bottomLinks d-flex">
+          <ul class="footer__bottomList d-flex flex-wrap">
+            <li class="footer__bottomLink"> <a href="#">Legal</a></li>
+            <li class="footer__bottomLink"> <a href="#">Privacy Center</a></li>
+            <li class="footer__bottomLink"> <a href="#">Privacy Policy</a></li>
+            <li class="footer__bottomLink"> <a href="#">Cookies</a></li>
+            <li class="footer__bottomLink"> <a href="#">About Ads</a></li>
+            <li class="footer__bottomLink"> <a href="#">Additional CA privacy Disclosures</a></li>
+          </ul>
+          <div class="footer__copyright ml-auto" href="#">&copy; 2021 Spotify AB</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

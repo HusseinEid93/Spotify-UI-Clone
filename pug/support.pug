@@ -1,0 +1,105 @@
+//- Some constants 
+- const titles = ['payment help', 'subscription options', 'account help', 'account help'];
+- const descriptions = ['Price updates', 'Start or join Family plan', "Can't reset password", 'Country or region settings']
+- const list1 = ['account help', 'payment help', 'subscription options', 'premium family', 'premium duo', 'premium student', 'privacy & security'];
+- const list2 = ['getting started', 'playlists', 'features', 'systems & settings', 'troubleshooting', 'ongoing issues'];
+- const list3 = ['speakers', 'TVs', 'cars', 'car thing', 'gaming', 'smart watches', 'smart displays', 'voice assistants'];
+
+
+include utilities/globals
+include utilities/components
+
+doctype html 
+html(lang="en")
+   head
+      +HTMLHead('support', 'Support - Spotify') 
+   body 
+      +navbarWithOverlay()
+
+
+      // Start the showcase section 
+      section.showcase  
+         .container.mw-md-100.flex-column.text-center.text-white(class=centerVertically) 
+            h1.m-0.showcase__heading.font-weight-bold.
+               How can we help you?
+            form.showcase__form.position-relative.overflow-hidden.rounded 
+               i.showcase__icon.showcase__icon--search.ml-3(class="fas fa-search position-absolute")
+               input.showcase__input.w-100.h-100.py-2.px-5(
+                  type="text" 
+                  placeholder="Search"
+               )
+               i.showcase__icon.showcase__icon--close.position-absolute(class="fas fa-times")
+            .showcase__links-group.d-flex.justify-content-between.flex-column.flex-lg-row.align-self-start.align-self-lg-center.text-left.text-lg-center 
+               span.d-lg-none.showcase__link-title.text-uppercase top solution  
+               each item, index in titles 
+                  .showcase__link-item.d-flex.flex-column
+                     span.showcase__link-title.text-uppercase.d-none.d-lg-block #{item}
+                     a(href="#") #{descriptions[index]} 
+
+
+      // Start .lists section for screens >= 768px
+      section.lists
+         .container.d-none.d-lg-block   
+            .lists__lists-group.mx-auto
+               .lists__list   
+                  .lists__list-title.font-weight-bold.
+                     Account & Payment
+                  +supportPageList(list1)
+               .lists__list   
+                  .lists__list-title.font-weight-bold.
+                     Using Spotify
+                  +supportPageList(list2)
+               .lists__list   
+                  .lists__list-title.font-weight-bold.
+                     Listen Everywhere 
+                  +supportPageList(list3)
+         
+         // Accordion for screens <= 767px 
+         .lists__accordion.d-lg-none
+            // List 1 
+            .lists__list 
+               .lists__list-header.py-3.px-3.d-flex.justify-content-between.align-items-center(
+                  data-toggle="collapse" data-target="#list1"
+               ) 
+                  .lists__list-title.font-weight-bold Account & Payment 
+                  i.lists__list-icon(class="fas fa-chevron-down") 
+               .lists__list-body(id="list1" class="collapse") 
+                  div.p-3: +supportPageList(list1)
+
+            // List 2
+            .lists__list 
+               .lists__list-header.py-3.px-3.d-flex.justify-content-between.align-items-center(
+                  data-toggle="collapse" data-target="#list2"
+               ) 
+                  .lists__list-title.font-weight-bold Using Spotify  
+                  i.lists__list-icon(class="fas fa-chevron-down") 
+               .lists__list-body(id="list2" class="collapse") 
+                  div.p-3: +supportPageList(list2)
+
+            // List 3 
+            .lists__list 
+               .lists__list-header.py-3.px-3.d-flex.justify-content-between.align-items-center(
+                  data-toggle="collapse" data-target="#list3"
+               ) 
+                  .lists__list-title.font-weight-bold Listen Everywhere  
+                  i.lists__list-icon(class="fas fa-chevron-down") 
+               .lists__list-body(id="list3" class="collapse") 
+                  div.p-3: +supportPageList(list3)
+
+
+      // Start .questions section 
+      section.questions.text-center
+         .container.mw-md-100.flex-column(class=centerVertically)  
+            h1.m-0.questions__heading.font-weight-bold Visit the Community 
+            p.questions__paragraph.mx-auto.
+               Have questions? Find answers from our worldwide Community of expert fans!  
+            +button('Find Answers')(class="questions__button text-capitalize")
+
+
+      // Footer 
+      +footer()
+
+
+      script(src="../JS/utilities/jquery-3.5.1.min.js")
+      script(src="../JS/utilities/bootstrap.min.js")  
+      script(src="../JS/support.js") 

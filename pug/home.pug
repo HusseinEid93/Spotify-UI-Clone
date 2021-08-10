@@ -1,0 +1,23 @@
+include utilities/globals
+include utilities/components
+
+
+doctype html 
+html(lang="en")
+   head 
+      +HTMLHead(
+         'home', 
+         'Listening is everything - Spotify'
+      )
+
+   body 
+      +navbarWithOverlay()
+
+      // Start the showcase section 
+      section.showcase.flex-column.text-center(class=flex)
+         h1.mb-4.showcase__heading #[span.d-block Listening is] everything
+         p.showcase__paragraph Millions of songs and podcasts. No credit card needed.
+         +button('get spotify free')(class="showcase__button text-uppercase")
+
+      // Start the footer 
+      +footer()
